@@ -1,2 +1,12 @@
 <div ng-include="'partials/navbar'"></div>
-<p>This is the sites view.</p>
+<form role="form">
+  <div class="form-group">
+    <label for="siteUrlField">Site Url Template</label>
+    <input type="text" class="form-control" id="siteUrlField" placeholder="Enter a site url here" ng-model="siteUrl">
+  </div>
+  <select multiple class="form-control">
+
+	  <option ng-repeat="fieldKey in fieldKeys">{{fieldKey}}</option>
+  </select>
+  
+</form>
