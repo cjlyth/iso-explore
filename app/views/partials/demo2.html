@@ -1,0 +1,27 @@
+<div ng-include="'partials/navbar'"></div>
+<button class="btn btn-default" ng-click="applySort()">Apply Sort</button>
+
+<div class="btn-group" 
+	isotope-sort 
+	isotope-sort-event="sort-color-list">
+    <button isotope-sort-by="original-order" class="btn btn-default active">original order</button>
+    <button isotope-sort-by="name" class="btn btn-default">name</button>
+    <button isotope-sort-by="id" class="btn btn-default">id</button>
+</div>
+<div class="btn-group" 
+	isotope-filter 
+	isotope-filter-event="filter-color-list" >
+    <button isotope-filter-by="*" class="btn btn-default active">show all</button>    
+    <button isotope-filter-by=".green" class="btn btn-default">green</button>
+</div>
+<div isotope-grid="colorList" 
+	isotope-reload-event="reload-color-list" 
+	isotope-sort-event="sort-color-list"
+    isotope-filter-event="filter-color-list"
+    isotope-sort-data="{ name: '.name', 'id': '.id parseInt' }">
+
+    <div class="{{color.css}}"  ng-repeat="color in colorList">
+        <h3 class="name">{{color.css}}</h3>
+        <p class="id">{{color.id}}</p>
+    </div>
+</div>
