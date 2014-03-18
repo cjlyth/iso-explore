@@ -21,6 +21,10 @@ angular.module('isoExploreApp', [
         templateUrl: 'partials/demo2',
         controller: 'Demo2Ctrl'
       })
+      .when('/sites', {
+        templateUrl: 'partials/sites',
+        controller: 'SitesCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -11,6 +11,9 @@ angular.module('isoExploreApp')
     },{
       'title': 'Demo2',
       'link': '/demo2'
+    },{
+      'title': 'Sites',
+      'link': '/sites'
     }];
     
     $scope.isActive = function(route) {
